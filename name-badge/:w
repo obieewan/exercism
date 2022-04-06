@@ -1,0 +1,29 @@
+defmodule NameBadge do
+  def print(id \\ nil, name, department \\ nil) do
+    # Please implement the print/3 function
+    dept = department |> String.upcase
+    cond do
+      id == nil -> "#{name} - #{dept}"
+      id == nil and department == nil -> "#{name} - OWNER"
+      _ ->"[#{id}] - #{name} - #{dept}"
+    end
+  end
+
+  def print(id, name, department) do
+    dept = String.upcase(department)
+    nm = String.capitalize(name)
+    "[#{id}] - #{nm} - #{dept}"
+  end
+
+  def print(nil, name, department) do
+    dept = String.upcase(department)
+    nm = String.capitalize(name)
+    "#{nm} - #{dept}"
+  end
+
+  def print(nil, name, nil) do
+    nm = String.capitalize(name)
+    "#{nm} - OWNER"
+  end
+
+  end
