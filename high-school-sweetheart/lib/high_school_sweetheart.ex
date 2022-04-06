@@ -27,23 +27,24 @@ defmodule HighSchoolSweetheart do
   end
 
   def pair(full_name1, full_name2) do
-
-    """
-      ******       ******
-    **      **   **      **
-  **         ** **         **
- **            *            **
- **                         **
- **     #{initials(full_name1)}  +  #{initials(full_name2)}     **
-  **                       **
-    **                   **
-      **               **
-        **           **
-          **       **
-            **   **
-              ***
-               *
-                 """
-    # Please implement the pair/2 function
+    initials1 = initials(full_name1)
+    initials2 = initials(full_name2)
+    
+               """
+                    ******       ******
+                  **      **   **      **
+                **         ** **         **
+               **            *            **
+               **                         **
+               **     #{initials1}  +  #{initials2}     **
+                **                       **
+                  **                   **
+                    **               **
+                      **           **
+                        **       **
+                          **   **
+                            ***
+                             *
+               """
   end
 end
