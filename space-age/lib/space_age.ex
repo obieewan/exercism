@@ -39,28 +39,23 @@ defmodule SpaceAge do
     end
   end
 
-
     
   #gets planet's earth years
-  def get_planet_earth_years(planet) do
+  defp get_planet_earth_years(planet) do
     Map.get(@planet_earth_years, planet)
   end
 
-  def is_planet?(planet) do
+  defp is_planet?(planet) do
     Map.has_key?(@planet_earth_years, planet)
   end
   
-  def seconds_to_earth_year(seconds) do
+  defp seconds_to_earth_year(seconds) do
     seconds / 31557600
   end
 
-  def earth_days_to_earth_years(days) do
+  defp earth_days_to_earth_years(days) do
     days / 365.25
   end
 
     
-    
-   
-
-
 end
