@@ -21,13 +21,18 @@ defmodule ResistorColorDuo do
   def value(colors) do
     colors
     |> Enum.take(2)
-    |> Enum.reduce([], fn key, acc -> 
-      value = Map.get(@band_colors, key)
-      [value | acc]
-    end)
+    |> take_val
     |> Enum.reverse()
     |> Enum.join()
     |> String.to_integer
+  end
+
+  defp take_val(colors) do
+    colors
+    |> Enum.reduce([], fn key, acc ->
+      value = Map.get(@band_colors, key)
+      [value | acc]
+    end)
   end
 
 
