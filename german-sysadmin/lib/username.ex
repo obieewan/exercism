@@ -18,7 +18,7 @@ defmodule Username do
 
   #defguardp is_under_score(codepoint) when codepoint == ?_
 
-  defp german_char_to_latin(char) do
+  def german_char_to_latin(char) do
     case char do
       ?ä -> 'ae'
       ?ö -> 'oe'
